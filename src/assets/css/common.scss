@@ -1,0 +1,351 @@
+@import './rest.css';
+.button-group {
+    float: right;
+    margin-top: -4px;
+  }
+  .main-content-search,.main-content-table {
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .header-container-left {
+        border-left: 3px solid #409eff;
+        padding-left: 12px;
+      }
+  
+      .header-container-left .title {
+        font-size: 16px;
+        font-weight: bold;
+      }
+  
+      .header-container-right {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+
+/*卡片样式*/
+.el-card {
+  .el-card__header {
+    /* height: 40px !important; */
+    line-height: 28px;
+    padding: 6px 12px !important;
+  }
+}
+/*自定义卡片/标签样式*/
+.me-card {
+  border-radius: 0 !important;
+  .el-card__body {
+    padding: 0 !important;
+  }
+}
+.me-card-bg {
+  border-radius: 6px !important;
+  background: #f5f5fc !important;
+  .el-card__header {
+    background-image: linear-gradient(45deg, #53a7d8, #a0cde1) !important;
+    .clearfix {
+      span {
+        color: #fff !important;
+      }
+    }
+  }
+}
+.me-card-header {
+  .el-card__header {
+    padding: 6px 12px !important;
+  }
+}
+.el-tabs--border-card {
+  padding: 2px;
+  border: 1px solid #fff !important;
+  box-shadow: 0 2px 0px 0 #fff !important;
+  background: transparent !important;
+  .el-tabs__header {
+    background: linear-gradient(270deg, #fafafa 0%, #fafafa 100%) !important;
+    border: 0 !important;
+    .el-tabs__item {
+      color: #42a1fc !important;
+      height: 32px !important;
+      line-height: 32px !important;
+    }
+  }
+}
+.el-tabs--border-card > .el-tabs__content {
+  padding: 0 !important;
+}
+.el-tabs--border-card > .el-tabs__header .el-tabs__item.is-active {
+  background: #419fff !important;
+  color: #fff !important;
+  border: 0 !important;
+}
+.me-tabs {
+  .el-tabs__header {
+    background: #fff !important;
+  }
+}
+/*边框样式*/
+.me-border {
+  border-color: transparent !important;
+  background: linear-gradient(#00eaff, #00eaff) left top, linear-gradient(#00eaff, #00eaff) left top,
+    linear-gradient(#00eaff, #00eaff) right top, linear-gradient(#00eaff, #00eaff) right top,
+    linear-gradient(#00eaff, #00eaff) left bottom, linear-gradient(#00eaff, #00eaff) left bottom,
+    linear-gradient(#00eaff, #00eaff) right bottom, linear-gradient(#00eaff, #00eaff) right bottom !important;
+  background-repeat: no-repeat !important;
+  background-size: 2px 12px, 12px 2px !important;
+  background-color: #fff !important;
+}
+/*自定义按钮样式*/
+.me-button {
+  color: #fff;
+  background: linear-gradient(45deg, #1babe4, #a1ecf2) !important;
+}
+/*更改默认table样式*/
+.el-table {
+  thead {
+    th {
+      background-color: #d7ecff !important;
+      color: #000 !important;
+    }
+  }
+
+  td {
+    padding: 0 !important;
+  }
+}
+.el-table__body tr.current-row > td,
+.el-table--striped .el-table__body tr.el-table__row--striped.current-row td {
+  background-color: #fff7ed !important;
+}
+.el-table--striped .el-table__body tr.el-table__row--striped td {
+  background-color: #f6fbff !important;
+}
+.el-table th,
+.el-table td {
+  padding: 4px 4px !important;
+}
+.el-table th {
+  text-align: center !important;
+}
+.el-table td {
+  .cell {
+    font-size: 12px !important;
+    margin: 0 4px;
+    color: #333333 !important;
+  }
+}
+
+.el-table th > .cell {
+  color: #000;
+  height: 32px !important;
+  line-height: 32px !important;
+  padding: 0 !important;
+}
+.el-table--mini th,
+.el-table--mini td {
+  padding: 0 !important;
+  .el-button--small {
+    padding: 0 !important;
+  }
+}
+.el-table .cell,
+.el-table .cell.el-tooltip,
+.el-table .cell button span {
+  font-size: 12px !important;
+  line-height: 24px !important;
+}
+.el-table td {
+  height: 32px !important;
+  line-height: 32px !important;
+}
+.el-table .cell,
+.el-table .cell button {
+  padding: 0 !important;
+}
+/*合计行样式*/
+.el-table .el-table__fixed-footer-wrapper .cell,
+.el-table .el-table__footer-wrapper .cell {
+  color:#409eff !important;
+}
+/*button 样式重置
+.el-button {
+  padding: 10px 12px !important;
+}*/
+/*自定义样式*/
+.el-badge__content {
+  background-color: #409eff;
+  height: 13px;
+  line-height: 13px;
+  padding: 2px 5px;
+}
+
+
+.layout-gird-box {
+  height: 100%;
+  background: radial-gradient(#f5f5fc, #f5f5fc, #f5f5fc, #f5f5fc, #f5f5fc, #fff);
+  .el-container {
+    height: 100% !important;
+  }
+  .el-card {
+    height: 100% !important;
+    .el-card__body {
+      height: 100% !important;
+    }
+  }
+}
+/*灰色渐变背景*/
+.bg-box {
+  height: calc(100% - 12px) !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: radial-gradient(#f5f5fc, #f5f5fc, #f5f5fc, #f5f5fc, #f5f5fc, #fff);
+}
+.add_css {
+  cursor: pointer;
+  color: #b2181e;
+}
+.title_css {
+  cursor: default;
+  color: #606266;
+}
+
+.el-time-spinner__item {
+  line-height: 16px !important;
+}
+
+.el-input.is-disabled .el-input__inner,
+.el-textarea.is-disabled .el-textarea__inner {
+  color: #606266;
+}
+
+
+
+.div-title {
+  border-left: 2px solid #b60005;
+  border-radius: 1px;
+  padding-left: 10px;
+  font-size: 14px;
+  color: #222120;
+  font-weight: bold;
+  text-align: left;
+  height: 18px;
+  line-height: 18px;
+}
+
+.return-button,
+.func-btn {
+  margin: 30px 0 10px;
+  text-align: center;
+}
+
+//折叠面板
+.collapse-title {
+  flex: 1 0 90%;
+  order: 1;
+}
+
+.el-collapse-item__header {
+  flex: 1 0 auto;
+  order: -1;
+}
+//经营计划、专项计划
+.base-layout-box {
+  background: #fff;
+  padding: 12px;
+}
+//主页面
+.base-page {
+  height: 100%;
+}
+.base-content-table,
+.base-content-table2 {
+  margin-top: 10px;
+  .el-table__body {
+    tbody {
+      tr {
+        height: 42px;
+        td {
+          padding: 5px 0 !important;
+        }
+      }
+    }
+  }
+}
+.base-content-table.no-margin-top,
+.base-content-table2.no-margin-top {
+  margin-top: 0;
+}
+.base-content-search,
+.base-content-table,
+.base-content-table2 {
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    .header-container-left {
+      border-left: 3px solid #409eff;
+      padding-left: 15px;
+    }
+
+    .header-container-left .title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .header-container-right {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+.new-dialog-style {
+  .el-dialog__body {
+    .plan-steps {
+      height: 100%;
+      .plan-msg-card {
+        .el-card__body {
+          padding: 12px 12px 6px 12px !important;
+          .el-form-item {
+            margin-bottom: 6px !important;
+          }
+        }
+      }
+      .plan-steps-card {
+        margin-top: 12px;
+        .el-card__body {
+          padding: 12px !important;
+          .plan-steps-info {
+            .el-steps {
+              height: 60px;
+              .el-step__icon.is-text {
+                cursor: pointer;
+              }
+            }
+            .plan-step-item {
+              .el-table {
+                .el-table__row {
+                  td {
+                    height: 32px !important;
+                    padding: 0 !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.card-clearTitle {
+  font-size: 14px;
+  color: #409eff;
+  font-weight: bold;
+}
+.pagination {
+  text-align: right;
+  padding: 10px 10px 1px 10px;
+}

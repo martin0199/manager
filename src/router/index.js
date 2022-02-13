@@ -1,27 +1,55 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-
+import auth from '@/plugins/auth'
+import store from '@/store'
+import NProgress from 'nprogress'
 Vue.use(VueRouter)
-
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/login',
+    name: 'login',
+    component: () => import('@/views/login.vue'),
+    hideInMenu: true
   }
 ]
-
 const router = new VueRouter({
   routes
 })
-
+NProgress.start()
+router.beforeEach((to, from, next) => {
+  const token = auth.getToken()
+  if (to.path === '/') {
+    if (token) {
+      next({
+        path: '/main'
+      })
+    } else {
+      next({
+        path: '/login'
+      })
+    }
+  } else if (to.path === '/login') {
+    if (token) {
+      next({
+        path: '/main'
+      })
+    } else {
+      next()
+    }
+  } else {
+    if (token) {
+      next()
+    } else {
+      next({
+        path: '/login'
+      })
+    }
+  }
+  if (!store.getters.getMenuLoaded) {
+    Vue.prototype.changeMenu()
+  }
+})
+router.afterEach(() => {
+  NProgress.done()
+})
 export default router
